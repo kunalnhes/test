@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span ><a  class="example-a" href="#">EEP</a></span>
+    <span class="example-spacer"></span>
+    <mat-icon [matMenuTriggerFor]="menu" class="example-icon">menu</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item><a routerLink="queries" href="#">Latest Queries</a></button>
+      <button mat-menu-item>In Progress</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+    <!--
+    <li class="nav-item">
+      <a routerLink="admin/123123" class="nav-link" href="#">Admin</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="result/123123" class="nav-link" href="#">Results</a>
+    </li>
+    -->
+
+  <router-outlet></router-outlet>
+

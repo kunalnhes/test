@@ -1,0 +1,27 @@
+<div class="container-fluid" style="padding: 10px">
+  <div class="container-fluid" style="display: flex; align-items: center; justify-content: center">
+    <form #form="ngForm" (ngSubmit)="checkGameId(form.value)" class="well">
+      <div class="form-group">
+        <input [(ngModel)]="idAdded"  style="width:800px; height: 100px;font-size: 50px;font-style: italic;text-align: center" class="from-control" rows="1" name="gameId">
+      </div>
+      <div style="align-items: right; justify-content: right">
+        <button type="submit" class="btn btn-primary" >Search Game</button>
+      </div>
+    </form>
+  </div>
+  &nbsp;
+  <div *ngIf="idMatched" class="container-fluid" style="display: flex; align-items: center; justify-content: center">
+    <form #form="ngForm"  (ngSubmit)="enterGame(form.value)" class="well">
+      <div class="form-group">
+        <input [(ngModel)]="playerId" style="width:800px; height: 100px;font-size: 50px;font-style: italic;text-align: center" class="from-control" rows="1" name="gameId">
+      </div>
+      <div style="align-items: right; justify-content: right">
+        <button type="submit" class="btn btn-primary" >Enter the game.</button>
+      </div>
+    </form>
+  </div>
+  <h3>{{message}}</h3>
+  <div>
+  Remeber to add unique ID or name. Once entered you will not be able to reenter with the same id. Kindly do not press refresh while game is on.
+  </div>
+</div>

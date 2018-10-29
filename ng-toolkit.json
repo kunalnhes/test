@@ -1,0 +1,17 @@
+{
+  "universal": {
+    "skipInstall": false,
+    "directory": ".",
+    "project": "GamesProject"
+  },
+  "serverless": {
+    "provider": "aws",
+    "skipInstall": false,
+    "directory": ".",
+    "project": "GamesProject",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  }
+}
